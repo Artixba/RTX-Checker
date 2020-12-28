@@ -59,7 +59,8 @@ def reddit():
         print("Reddit:\n\n")
         post_title = post.find('h3')
         print(post_title.text)
-        print('↑Reddit↑')
+        post_link = post.find('a', {'class':'styled-outbound-link'})
+        print(post_link['href'])
 useroption = True
 while(useroption == True):
    try:
